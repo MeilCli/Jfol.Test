@@ -8,11 +8,11 @@
     - text: " "
     - functionNodes:
         - functionIdentifier: "array"
-        - functionIDentifier: "length"
+        - functionIdentifier: "length"
     - text: "\n"
     - fieldNodes:
         - functionIdentifier: "array"
-    - fieldBodies:
+      fieldBodies:
         - functionNodes:
             - functionIdentifier: "index"
         - text: ":"
