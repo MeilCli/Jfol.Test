@@ -9,7 +9,7 @@
             - numberValue: 1
             - numberValue: 1
         - expression:
-            - operator: "*/"
+            - operator: "/"
             - numberValue: 1
             - numberValue: 1
         - expression:
