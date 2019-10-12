@@ -1,0 +1,9 @@
+[[test]]
+name = "test for your test code(line break)"
+jfol = '''
+This test is for your test code.
+Because toml line break is depended on runtime.
+'''
+  [[test.tokens]]
+  text = "This test is for your test code.\nBecause toml line break is depended on runtime."
+  token = "Text"
