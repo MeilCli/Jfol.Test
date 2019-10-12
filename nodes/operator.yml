@@ -102,6 +102,114 @@
                 - numberValue: 1
                 - numberValue: 1
 
+- name: parse inline(left inline(left))
+  jfol: "$$f(((1+1)+1)+1)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - expression:
+                - operator: "+"
+                - expression:
+                    - operator: "+"
+                    - numberValue: 1
+                    - numberValue: 1
+                - numberValue: 1
+            - numberValue: 1
+
+- name: parse inline(left inline(right))
+  jfol: "$$f((1+(1+1))+1)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - expression:
+                    - operator: "+"
+                    - numberValue: 1
+                    - numberValue: 1
+            - numberValue: 1
+
+- name: parse inline(left inline(both))
+  jfol: "$$f(((1+1)+(1+1))+1)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - expression:
+                - operator: "+"
+                - expression:
+                    - operator: "+"
+                    - numberValue: 1
+                    - numberValue: 1
+                - expression:
+                    - operator: "+"
+                    - numberValue: 1
+                    - numberValue: 1
+            - numberValue: 1
+
+- name: parse inline(right inline(left))
+  jfol: "$$f(1+((1+1)+1))"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - numberValue: 1
+            - expression:
+                - operator: "+"
+                - expression:
+                    - operator: "+"
+                    - numberValue: 1
+                    - numberValue: 1
+                - numberValue: 1
+
+- name: parse inline(right inline(right))
+  jfol: "$$f(1+(1+(1+1)))"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - numberValue: 1
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - expression:
+                    - operator: "+"
+                    - numberValue: 1
+                    - numberValue: 1
+
+- name: parse inline(right inline(both))
+  jfol: "$$f(1+((1+1)+(1+1)))"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - numberValue: 1
+            - expression:
+                - operator: "+"
+                - expression:
+                    - operator: "+"
+                    - numberValue: 1
+                    - numberValue: 1
+                - expression:
+                    - operator: "+"
+                    - numberValue: 1
+                    - numberValue: 1
+
 - name: parse priority(left)
   jfol: "$$f(1*2+3)"
   nodes:
@@ -146,3 +254,34 @@
                 - operator: "*"
                 - numberValue: 3
                 - numberValue: 4
+
+- name: parse same priority1
+  jfol: "$$f(1+2+3)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - numberValue: 1
+            - expression:
+                - operator: "+"
+                - numberValue: 2
+                - numberValue: 3
+
+- name: parse same priority2
+  jfol: "$$f(1+2+3+4)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - numberValue: 1
+            - expression:
+                - operator: "+"
+                - numberValue: 2
+                - expression:
+                    - operator: "+"
+                    - numberValue: 3
+                    - numberValue: 4
