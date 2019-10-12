@@ -55,7 +55,7 @@ jfol = '''
 [[test]]
 name = "escape sequence"
 jfol = '''
-\0\b\f\n\r\t\v"
+\0\b\f\n\r\t\v
 '''
   [[test.tokens]]
   text = "\u0000"
