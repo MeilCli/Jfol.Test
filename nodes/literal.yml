@@ -69,7 +69,9 @@
   nodes:
     - text: "1"
     - text: " "
-    - text: "1.1"
+    - text: "1"
+    - text: "."
+    - text: "1"
 
 - name: text(null)
   jfol: "null"
