@@ -1,0 +1,110 @@
+- name: field
+  jfol: "$value"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "value"
+
+- name: field body
+  jfol: "$array[test]"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "array"
+      fieldBodies:
+        - text: "test"
+
+- name: field body(field)
+  jfol: "$array[$value]"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "array"
+      fieldBodies:
+        - fieldNodes:
+            - fieldIdentifier: "value"
+
+- name: field body(function)
+  jfol: "$array[$$index]"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "array"
+      fieldBodies:
+        - functionNodes:
+            - functionIdentifier: "index"
+
+- name: field body(function argument)
+  jfol: "$array[$$f(true)]"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "array"
+      fieldBodies:
+        - functionNodes:
+            - functionIdentifier: "f"
+          functionArguments:
+            - booleanValue: true
+
+- name: field body(function arguments)
+  jfol: "$array[$$f(true,false)]"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "array"
+      fieldBodies:
+        - functionNodes:
+            - functionIdentifier: "f"
+          functionArguments:
+            - expression:
+                - booleanValue: true
+            - expression:
+                - booleanValue: false
+
+- name: field body(function body)
+  jfol: "$array[$$f[test]]"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "array"
+      fieldBodies:
+        - functionNodes:
+            - functionIdentifier: "f"
+          functionBodies:
+            - text: "test"
+
+- name: field body(function body(field))
+  jfol: "$array[$$f[$value]]"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "array"
+      fieldBodies:
+        - functionNodes:
+            - functionIdentifier: "f"
+          functionBodies:
+            - fieldNodes:
+                - fieldIdentifier: "value"
+
+- name: field with no identifier
+  jfol: "$[test]"
+  nodes:
+    - fieldNodes: []
+      fieldBodies:
+        - text: "test"
+
+- name: field with no identifier(field)
+  jfol: "$[$value]"
+  nodes:
+    - fieldNodes: []
+      fieldBodies:
+        - fieldNodes:
+            - fieldIdentifier: "value"
+
+- name: field identifiers
+  jfol: "$(v.value)"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "v"
+        - fieldIdentifier: "value"
+
+- name: field identifiers and body
+  jfol: "$(v.value)[test]"
+  nodes:
+    - fieldNodes:
+        - fieldIdentifier: "v"
+        - fieldIdentifier: "value"
+      fieldBodies:
+        - text: "test"

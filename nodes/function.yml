@@ -1,0 +1,194 @@
+- name: function
+  jfol: "$$f"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+
+- name: function argument
+  jfol: "$$f(true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - booleanValue: true
+
+- name: function arguments
+  jfol: "$$f(true,false)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - booleanValue: true
+        - expression:
+            - booleanValue: false
+
+- name: function argument(operate)
+  jfol: "$$f(1*(2+3))"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "*"
+            - numberValue: 1
+            - expression:
+                - operator: "+"
+                - numberValue: 2
+                - numberValue: 3
+
+- name: function arguments(operate)
+  jfol: "$$f(1*(2+3),4*(5+6))"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "*"
+            - numberValue: 1
+            - expression:
+                - operator: "+"
+                - numberValue: 2
+                - numberValue: 3
+        - expression:
+            - operator: "*"
+            - numberValue: 4
+            - expression:
+                - operator: "+"
+                - numberValue: 5
+                - numberValue: 6
+
+- name: function argument(field)
+  jfol: "$$f($value)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - fieldNodes:
+                - fieldIdentifier: "value"
+
+- name: function argument(function)
+  jfol: "$$f($$g)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - functionNodes:
+                - functionIdentifier: "g"
+
+- name: function argument(function argument)
+  jfol: "$$f($$g(true))"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - functionNodes:
+                - functionIdentifier: "g"
+              functionArguments:
+                - expression:
+                    - booleanValue: true
+
+- name: function body
+  jfol: "$$f[test]"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionBodies:
+        - text: "test"
+
+- name: function body(field)
+  jfol: "$$f[$value]"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionBodies:
+        - fieldNodes:
+            - fieldIdentifier: "value"
+
+- name: function body(field body)
+  jfol: "$$f[$value[test]]"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionBodies:
+        - fieldNodes:
+            - fieldIdentifier: "value"
+          fieldBodies:
+            - text: "test"
+
+- name: function body(field body(field))
+  jfol: "$$f[$value[$value]]"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionBodies:
+        - fieldNodes:
+            - fieldIdentifier: "value"
+          fieldBodies:
+            - fieldNodes:
+                - fieldIdentifier: "value"
+
+- name: function body(field body(function))
+  jfol: "$$f[$value[$$g]]"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionBodies:
+        - fieldNodes:
+            - fieldIdentifier: "value"
+          fieldBodies:
+            - functionNodes:
+                - functionIdentifier: "g"
+
+- name: function argument and body
+  jfol: "$$f(true)[test]"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - booleanValue: true
+      functionBodies:
+        - text: "test"
+
+- name: function identifiers
+  jfol: "$$(f.g)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+        - functionIdentifier: "g"
+
+- name: function identifiers and body
+  jfol: "$$(f.g)[test]"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+        - functionIdentifier: "g"
+      functionBodies:
+        - text: "test"
+
+- name: function identifiers and argument
+  jfol: "$$(f.g)(true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+        - functionIdentifier: "g"
+      functionArguments:
+        - expression:
+            - booleanValue: true
+
+- name: function identifiers and argument and body
+  jfol: "$$(f.g)(true)[test]"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+        - functionIdentifier: "g"
+      functionArguments:
+        - expression:
+            - booleanValue: true
+      functionBodies:
+        - text: "test"

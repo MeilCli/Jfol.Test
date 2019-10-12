@@ -50,7 +50,7 @@ export type Operator = "==" | "!=" | "+" | "-" | "%" | "*" | "/" | "&&" | "||" |
 ```yaml
 fieldNodes:
   - fieldIdentifier: ""
-fieldBodies:
+fieldBodies: # optional
   - text: "" # some nodes
 ```
 
@@ -58,9 +58,9 @@ fieldBodies:
 ```yaml
 functionNodes:
   - functionIdentifier: ""
-functionArguments:
+functionArguments: # optional
   - booleanValue: true # some expression
-functionBodies:
+functionBodies: # optional
   - text: "" # some nodes
 ```
 
