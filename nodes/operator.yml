@@ -1,0 +1,148 @@
+- name: parse operator
+  jfol: "$$f(1*1,1/1,1%1,1+1,1-1,1<1,1<=1,1>1,1>=1,1==1,1!=1,true&&true,true||true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "*"
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "*/"
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "%"
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "+"
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "-"
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "<"
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "<="
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: ">"
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: ">="
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "=="
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "!="
+            - numberValue: 1
+            - numberValue: 1
+        - expression:
+            - operator: "&&"
+            - booleanValue: true
+            - booleanValue: true
+        - expression:
+            - operator: "||"
+            - booleanValue: true
+            - booleanValue: true
+
+- name: parse inline(left)
+  jfol: "$$f((1+1)+1)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - numberValue: 1
+            - numberValue: 1
+
+- name: parse inline(right)
+  jfol: "$$f(1+(1+1))"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - numberValue: 1
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - numberValue: 1
+
+- name: parse inline(both)
+  jfol: "$$f((1+1)+(1+1))"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - numberValue: 1
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - numberValue: 1
+
+- name: parse priority(left)
+  jfol: "$$f(1*2+3)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - expression:
+                - operator: "*"
+                - numberValue: 1
+                - numberValue: 2
+            - numberValue: 3
+
+- name: parse priority(right)
+  jfol: "$$f(1+2*3)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - numberValue: 1
+            - expression:
+                - operator: "*"
+                - numberValue: 2
+                - numberValue: 3
+
+- name: parse priority(both)
+  jfol: "$$f(1*2+3*4)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - expression:
+                - operator: "*"
+                - numberValue: 1
+                - numberValue: 2
+            - expression:
+                - operator: "*"
+                - numberValue: 3
+                - numberValue: 4
