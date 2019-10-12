@@ -39,7 +39,8 @@
         - functionNodes:
             - functionIdentifier: "f"
           functionArguments:
-            - booleanValue: true
+            - expression:
+                - booleanValue: true
 
 - name: field body(function arguments)
   jfol: "$array[$$f(true,false)]"
