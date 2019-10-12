@@ -23,6 +23,8 @@ AST Parser and Semantic Analyzer are converting to Nodes from Tokens. Different 
 
 So test data is raw string and expected complete Nodes as AST, because imcomplete Nodes as AST will be different on any implementation.
 
+Test Data Location: [nodes](nodes)
+
 ### Compiler
 Compiler's job is to give conclusive result using by JSON and AST Nodes.
 
