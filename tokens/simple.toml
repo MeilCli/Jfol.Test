@@ -1,0 +1,98 @@
+[[test]]
+name = "simple"
+jfol = '''
+Packages Total: $$(array.length)\n$array[$$index: $(package.name)$$separator[\n]]
+'''
+  [[test.tokens]]
+  text = "Packages"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "Total"
+  token = "Text"
+  [[test.tokens]]
+  text = ":"
+  token = "Colon"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "$$"
+  token = "DoubleDollar"
+  [[test.tokens]]
+  text = "("
+  token = "LeftParenthesis"
+  [[test.tokens]]
+  text = "array"
+  token = "Text"
+  [[test.tokens]]
+  text = "."
+  token = "Dot"
+  [[test.tokens]]
+  text = "length"
+  token = "Text"
+  [[test.tokens]]
+  text = ")"
+  token = "RightParenthesis"
+  [[test.tokens]]
+  text = "\n"
+  token = "Text"
+  [[test.tokens]]
+  text = "$"
+  token = "Dollar"
+  [[test.tokens]]
+  text = "array"
+  token = "Text"
+  [[test.tokens]]
+  text = "["
+  token = "LeftSquareBracket"
+  [[test.tokens]]
+  text = "$$"
+  token = "DoubleDollar"
+  [[test.tokens]]
+  text = "index"
+  token = "Text"
+  [[test.tokens]]
+  text = ":"
+  token = "Colon"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "$"
+  token = "Dollar"
+  [[test.tokens]]
+  text = "("
+  token = "LeftParenthesis"
+  [[test.tokens]]
+  text = "package"
+  token = "Text"
+  [[test.tokens]]
+  text = "."
+  token = "Dot"
+  [[test.tokens]]
+  text = "name"
+  token = "Text"
+  [[test.tokens]]
+  text = ")"
+  token = "RightParenthesis"
+  [[test.tokens]]
+  text = "$$"
+  token = "DoubleDollar"
+  [[test.tokens]]
+  text = "separator"
+  token = "Text"
+  [[test.tokens]]
+  text = "["
+  token = "LeftSquareBracket"
+  [[test.tokens]]
+  text = "\n"
+  token = "Text"
+  [[test.tokens]]
+  text = "]"
+  token = "RightSquareBracket"
+  [[test.tokens]]
+  text = "]"
+  token = "RightSquareBracket"

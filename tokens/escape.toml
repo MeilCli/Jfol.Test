@@ -1,0 +1,80 @@
+[[test]]
+name = "escape"
+jfol = '''
+\$ \$\$ \( \) \[ \] \\ \"
+'''
+  [[test.tokens]]
+  text = "$"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "$"
+  token = "Text"
+  [[test.tokens]]
+  text = "$"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "("
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = ")"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "["
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "]"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "\\"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "\""
+  token = "Text"
+
+[[test]]
+name = "escape sequence"
+jfol = '''
+\0\b\f\n\r\t\v"
+'''
+  [[test.tokens]]
+  text = "\u0000"
+  token = "Text"
+  [[test.tokens]]
+  text = "\b"
+  token = "Text"
+  [[test.tokens]]
+  text = "\f"
+  token = "Text"
+  [[test.tokens]]
+  text = "\n"
+  token = "Text"
+  [[test.tokens]]
+  text = "\r"
+  token = "Text"
+  [[test.tokens]]
+  text = "\t"
+  token = "Text"
+  [[test.tokens]]
+  text = "\u000B"
+  token = "Text"
