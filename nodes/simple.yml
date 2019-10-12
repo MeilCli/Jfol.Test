@@ -1,0 +1,26 @@
+- name: simple
+  jfol: "Packages Total: $$(array.length)\n$array[$$index: $(package.name)$$separator[\n]]"
+  nodes:
+    - text: "Packages"
+    - text: " "
+    - text: "Total"
+    - text: ":"
+    - text: " "
+    - functionNodes:
+        - functionIdentifier: "array"
+        - functionIDentifier: "length"
+    - text: "\n"
+    - fieldNodes:
+        - functionIdentifier: "array"
+    - fieldBodies:
+        - functionNodes:
+            - functionIdentifier: "index"
+        - text: ":"
+        - text: " "
+        - fieldNodes:
+            - fieldIdentifier: "package"
+            - fieldIdentifier: "name"
+        - functionNodes:
+            - functionIdentifier: "separator"
+          functionBodies:
+            - text: "\n"
