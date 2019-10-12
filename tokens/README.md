@@ -13,6 +13,8 @@ jfol = '''
   token = "" # Token Type
 ```
 
+test.jfol's string must cut last `\r\n` when your test, because inserting this line breaks means readable test data.
+
 ## Token Type
 ```ts
 export type TokenType =
