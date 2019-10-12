@@ -11,7 +11,7 @@
         - functionIdentifier: "length"
     - text: "\n"
     - fieldNodes:
-        - functionIdentifier: "array"
+        - fieldIdentifier: "array"
       fieldBodies:
         - functionNodes:
             - functionIdentifier: "index"
