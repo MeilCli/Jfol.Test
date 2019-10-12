@@ -1,0 +1,17 @@
+[[test]]
+name = "character test"
+jfol = '''
+:;,"
+'''
+  [[test.tokens]]
+  text = ":"
+  token = "Colon"
+  [[test.tokens]]
+  text = ";"
+  token = "SemiColon"
+  [[test.tokens]]
+  text = ","
+  token = "Comma"
+  [[test.tokens]]
+  text = "\""
+  token = "DoubleQuotation"

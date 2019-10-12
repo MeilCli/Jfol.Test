@@ -1,0 +1,38 @@
+[[test]]
+name = "character test"
+jfol = '''
+=+-/*%!&|<>
+'''
+  [[test.tokens]]
+  text = "="
+  token = "Equal"
+  [[test.tokens]]
+  text = "+"
+  token = "Plus"
+  [[test.tokens]]
+  text = "-"
+  token = "Minus"
+  [[test.tokens]]
+  text = "/"
+  token = "Slash"
+  [[test.tokens]]
+  text = "*"
+  token = "Asterisk"
+  [[test.tokens]]
+  text = "%"
+  token = "Percent"
+  [[test.tokens]]
+  text = "!"
+  token = "Bang"
+  [[test.tokens]]
+  text = "&"
+  token = "Ampersand"
+  [[test.tokens]]
+  text = "|"
+  token = "VerticalLine"
+  [[test.tokens]]
+  text = "<"
+  token = "LessThan"
+  [[test.tokens]]
+  text = ">"
+  token = "GreaterThan"
