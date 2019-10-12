@@ -335,7 +335,7 @@
         - functionIdentifier: "f"
       functionArguments:
         - expression:
-            - operator: "||"
+            - operator: "<"
             - expression:
                 - operator: "*"
                 - numberValue: 1
