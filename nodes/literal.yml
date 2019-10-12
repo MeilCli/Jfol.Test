@@ -1,0 +1,77 @@
+- name: string literal
+  jfol: '$$f("value")'
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - stringValue: "value"
+
+- name: boolean literal(true)
+  jfol: "$$f(true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - booleanValue: true
+
+- name: boolean literal(false)
+  jfol: "$$f(false)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - booleanValue: false
+
+- name: number literal(integer)
+  jfol: "$$f(1)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - numberValue: 1
+
+- name: number literal(float)
+  jfol: "$$f(1.1)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - numberValue: 1.1
+
+- name: null literal
+  jfol: "$$f(null)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - nullValue: null
+
+- name: text(string)
+  jfol: '"$$f"'
+  nodes:
+    - text: "$$f"
+
+- name: text(boolean)
+  jfol: "true false"
+  nodes:
+    - text: "true"
+    - text: " "
+    - text: "false"
+
+- name: text(number)
+  jfol: "1 1.1"
+  nodes:
+    - text: "1"
+    - text: " "
+    - text: "1.1"
+
+- name: text(null)
+  jfol: "null"
+  nodes:
+    - text: "null"
