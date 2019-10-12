@@ -5,5 +5,92 @@ This test is for your test code.
 Because toml line break is depended on runtime.
 '''
   [[test.tokens]]
-  text = "This test is for your test code.\nBecause toml line break is depended on runtime."
+  text = "This"
   token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "test"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "is"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "for"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "your"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "test"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "code"
+  token = "Text"
+  [[test.tokens]]
+  text = "."
+  token = "Dot"
+  [[test.tokens]]
+  text = "\nBecause"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "toml"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "line"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "break"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "is"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "depended"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "on"
+  token = "Text"
+  [[test.tokens]]
+  text = " "
+  token = "Space"
+  [[test.tokens]]
+  text = "runtime"
+  token = "Text"
+  [[test.tokens]]
+  text = "."
+  token = "Dot"
