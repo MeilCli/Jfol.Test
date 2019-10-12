@@ -285,3 +285,213 @@
                     - operator: "+"
                     - numberValue: 3
                     - numberValue: 4
+
+- name: operator priority(*, ||)
+  jfol: "$$f(1*2||true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "||"
+            - expression:
+                - operator: "*"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(*, &&)
+  jfol: "$$f(1*2&&true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "&&"
+            - expression:
+                - operator: "*"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(*, ==)
+  jfol: "$$f(1*2==true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "=="
+            - expression:
+                - operator: "*"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(*, <)
+  jfol: "$$f(1*2<3)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "||"
+            - expression:
+                - operator: "*"
+                - numberValue: 1
+                - numberValue: 2
+            - numberValue: 3
+
+- name: operator priority(*, +)
+  jfol: "$$f(1*2+3)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "+"
+            - expression:
+                - operator: "*"
+                - numberValue: 1
+                - numberValue: 2
+            - numberValue: 3
+
+- name: operator priority(+, ||)
+  jfol: "$$f(1+2||true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "||"
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(+, &&)
+  jfol: "$$f(1+2&&true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "&&"
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(+, ==)
+  jfol: "$$f(1+2==true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "=="
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(+, <)
+  jfol: "$$f(1+2<3)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "<"
+            - expression:
+                - operator: "+"
+                - numberValue: 1
+                - numberValue: 2
+            - numberValue: 3
+
+- name: operator priority(<, ||)
+  jfol: "$$f(1<2||true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "||"
+            - expression:
+                - operator: "<"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(<, &&)
+  jfol: "$$f(1<2&&true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "&&"
+            - expression:
+                - operator: "<"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(<, ==)
+  jfol: "$$f(1<2==true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "=="
+            - expression:
+                - operator: "<"
+                - numberValue: 1
+                - numberValue: 2
+            - booleanValue: true
+
+- name: operator priority(<, ||)
+  jfol: "$$f(true==true||true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "||"
+            - expression:
+                - operator: "=="
+                - booleanValue: true
+                - booleanValue: true
+            - booleanValue: true
+
+- name: operator priority(<, &&)
+  jfol: "$$f(true==true&&true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "&&"
+            - expression:
+                - operator: "=="
+                - booleanValue: true
+                - booleanValue: true
+            - booleanValue: true
+
+- name: operator priority(&&, ||)
+  jfol: "$$f(true&&true||true)"
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - operator: "||"
+            - expression:
+                - operator: "&&"
+                - booleanValue: true
+                - booleanValue: true
+            - booleanValue: true
