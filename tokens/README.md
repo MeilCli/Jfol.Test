@@ -13,7 +13,8 @@ jfol = '''
   token = "" # Token Type
 ```
 
-test.jfol's string must cut last `\r\n` when your test, because inserting this line breaks means readable test data.
+test.jfol's string must cut last `\r\n` or `\n`(depend on runtime) when your test, because inserting this line breaks means readable test data.  
+And line break(`\r\n` or `\n`) is expected `\n` on expected result, so replace `\r\n` to `\n` when testing.
 
 ## Token Type
 ```ts
