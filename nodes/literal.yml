@@ -15,6 +15,7 @@
       functionArguments:
         - expression:
             - stringValue: "value1"
+        - expression:
             - stringValue: "value2"
 
 - name: boolean literal(true)
