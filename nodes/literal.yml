@@ -7,6 +7,16 @@
         - expression:
             - stringValue: "value"
 
+- name: string literal(multiple)
+  jfol: '$$f("value1","value2")'
+  nodes:
+    - functionNodes:
+        - functionIdentifier: "f"
+      functionArguments:
+        - expression:
+            - stringValue: "value1"
+            - stringValue: "value2"
+
 - name: boolean literal(true)
   jfol: "$$f(true)"
   nodes:
