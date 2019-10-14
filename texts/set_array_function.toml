@@ -44,14 +44,18 @@ json = '''
 '''
 
 jfol = '''
-$$setArray("array2",$array)$array[$$delete("value")]$$json($array2)
+$$setArray("array2",$array)$array[$$setBoolean("value2",true)]$$json($array2)
 '''
 
 text = """
 [
     {
+        "value": 1,
+        "value2": true
     },
     {
+        "value": 2,
+        "value2": true
     }
 ]
 """
