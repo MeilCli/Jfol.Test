@@ -21,6 +21,6 @@ jfol = '''
 Packages Total: $$(array.length)\n$array[$$index: $(package.name)$$separator[\n]]
 '''
 
-text = '''
+text = """
 Packages Total: 2\n0: pack1\n1: pack2
-'''
+"""
