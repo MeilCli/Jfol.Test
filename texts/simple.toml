@@ -22,7 +22,5 @@ Packages Total: $$(array.length)\n$array[$$index: $(package.name)$$separator[\n]
 '''
 
 text = '''
-Packages Total: 2
-0: pack1
-1: pack2
+Packages Total: 2\n0: pack1\n1: pack2
 '''
