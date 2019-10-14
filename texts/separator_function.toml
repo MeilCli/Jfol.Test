@@ -62,7 +62,7 @@ json = '''
 '''
 
 jfol = '''
-$array[$value$$separator[$value
+$array[$value$$separator[$(value)
 ]]
 '''
 
