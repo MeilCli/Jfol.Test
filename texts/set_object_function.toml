@@ -1,0 +1,42 @@
+[[test]]
+name = "setObject"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$$setObject("value2",$value)$$json($value2)
+'''
+
+text = """
+{
+    "text": "test"
+}
+"""
+
+[[test]]
+name = "setObject(reference copy)"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$$setObject("value2",$value)$$(value.setBoolean)("flag",true)$$json($value2)
+'''
+
+text = """
+{
+    "text": "test",
+    "flag": true
+}
+"""

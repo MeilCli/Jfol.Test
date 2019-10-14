@@ -1,0 +1,71 @@
+[[test]]
+name = "copy"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$$copy("value2",$value)$$json($value2)
+'''
+
+text = """
+{
+    "text": "test"
+}
+"""
+
+[[test]]
+name = "copy(deep copy, object)"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$$copy("value2",$value)$$(value.setBoolean)("flag",true)$$json($value2)
+'''
+
+text = """
+{
+    "text": "test"
+}
+"""
+
+[[test]]
+name = "copy(deep copy, array)"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$$copy("array2",$array)$array[$$setBoolean("flag",true)]$$json($array2)
+'''
+
+text = """
+[
+    {
+        "value": 1
+    },
+    {
+        "value": 2
+    }
+]
+"""

@@ -1,0 +1,138 @@
+[[test]]
+name = "json"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$$json
+'''
+
+text = """
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+"""
+
+[[test]]
+name = "json(object)"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$$json($value)
+'''
+
+text = """
+{
+    "text": "test"
+}
+"""
+
+[[test]]
+name = "json(array)"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$$json($array)
+'''
+
+text = """
+[
+    {
+        "value": 1
+    },
+    {
+         "value": 2
+    }
+]
+"""
+
+[[test]]
+name = "json(boolean)"
+json = '''
+{
+    "value": true
+}
+'''
+
+jfol = '''
+$$json($value)
+'''
+
+text = """
+true
+"""
+
+[[test]]
+name = "json(number)"
+json = '''
+{
+    "value": 11
+}
+'''
+
+jfol = '''
+$$json($value)
+'''
+
+text = """
+11
+"""
+
+[[test]]
+name = "json(string)"
+json = '''
+{
+    "value": "text"
+}
+'''
+
+jfol = '''
+$$json($value)
+'''
+
+text = '''
+"text"
+'''
+
+[[test]]
+name = "json(null)"
+json = '''
+{
+    "value": null
+}
+'''
+
+jfol = '''
+$$json($value)
+'''
+
+text = """
+null
+"""

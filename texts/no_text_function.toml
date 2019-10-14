@@ -1,0 +1,24 @@
+[[test]]
+name = "copy"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$$noText[
+    $$copy("value2",$value)
+    $$(value.setBoolean)("flag",true)
+    $$(value.delete)("text")
+]$$json($value2)
+'''
+
+text = """
+{
+    "text": "test"
+}
+"""

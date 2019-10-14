@@ -1,0 +1,18 @@
+[[test]]
+name = "parent"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$value[$$parent[$text]]
+'''
+
+text = """
+hello
+"""
