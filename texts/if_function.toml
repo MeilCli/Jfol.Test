@@ -1,0 +1,79 @@
+[[test]]
+name = "if(field)"
+json = '''
+{
+    "name": "meil"
+}
+'''
+
+jfol = '''
+Hello World$$if($name=="meil")[, MeilCli].
+'''
+
+text = """
+Hello World, MeilCli.
+"""
+
+[[test]]
+name = "if(true)"
+json = '''
+{
+    "name": "meil"
+}
+'''
+
+jfol = '''
+Hello World$$if(true)[, MeilCli].
+'''
+
+text = """
+Hello World, MeilCli.
+"""
+
+[[test]]
+name = "if(false)"
+json = '''
+{
+    "name": "meil"
+}
+'''
+
+jfol = '''
+Hello World$$if(false)[, MeilCli].
+'''
+
+text = """
+Hello World.
+"""
+
+[[test]]
+name = "if(number, true)"
+json = '''
+{
+    "name": "meil"
+}
+'''
+
+jfol = '''
+Hello World$$if(1*2+3*4<100)[, MeilCli].
+'''
+
+text = """
+Hello World, MeilCli.
+"""
+
+[[test]]
+name = "if(number, false)"
+json = '''
+{
+    "name": "meil"
+}
+'''
+
+jfol = '''
+Hello World$$if(1*2+3*4<0)[, MeilCli].
+'''
+
+text = """
+Hello World.
+"""

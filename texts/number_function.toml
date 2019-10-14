@@ -1,0 +1,24 @@
+[[test]]
+name = "number"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[number $$number value: $value$$separator[
+]]
+'''
+
+text = """
+number 1 value: 1
+number 2 value: 2
+"""

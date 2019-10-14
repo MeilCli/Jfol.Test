@@ -1,0 +1,112 @@
+[[test]]
+name = "where(field)"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[value: $value$$where($value==1)]
+'''
+
+text = """
+value: 1
+"""
+
+[[test]]
+name = "root where"
+json = '''
+[
+    {
+        "value": 1
+    },
+    {
+        "value": 2
+    }
+]
+'''
+
+jfol = '''
+$[value: $value$$where($value==1)]
+'''
+
+text = """
+value: 1
+"""
+
+[[test]]
+name = "where(function)"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[value: $value$$where($$index==1)]
+'''
+
+text = """
+value: 2
+"""
+
+[[test]]
+name = "where(true)"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[value: $value$$where(true)]
+'''
+
+text = """
+value: 1value: 2
+"""
+
+[[test]]
+name = "where(false)"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[value: $value$$where(false)]
+'''
+
+text = """
+
+"""

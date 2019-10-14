@@ -1,0 +1,98 @@
+[[test]]
+name = "array"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[$value]
+'''
+
+text = """
+12
+"""
+
+[[test]]
+name = "array(raw value, number)"
+json = '''
+{
+    "array": [
+        1,
+        2
+    ]
+}
+'''
+
+jfol = '''
+$array[$$value]
+'''
+
+text = """
+12
+"""
+
+[[test]]
+name = "array(raw value, boolean)"
+json = '''
+{
+    "array": [
+        true,
+        false
+    ]
+}
+'''
+
+jfol = '''
+$array[$$value]
+'''
+
+text = """
+truefalse
+"""
+
+[[test]]
+name = "array(raw value, string)"
+json = '''
+{
+    "array": [
+        "a",
+        "b"
+    ]
+}
+'''
+
+jfol = '''
+$array[$$value]
+'''
+
+text = """
+ab
+"""
+
+[[test]]
+name = "array(raw value, null)"
+json = '''
+{
+    "array": [
+        null,
+        null
+    ]
+}
+'''
+
+jfol = '''
+$array[$$value]
+'''
+
+text = """
+nullnull
+"""

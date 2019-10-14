@@ -1,0 +1,24 @@
+[[test]]
+name = "index"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[index $$index value: $value$$separator[
+]]
+'''
+
+text = """
+index 0 value: 1
+index 1 value: 2
+"""

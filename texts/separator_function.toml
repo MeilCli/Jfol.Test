@@ -1,0 +1,72 @@
+[[test]]
+name = "separator"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[$value$$separator[
+]]
+'''
+
+text = """
+1
+2
+"""
+
+[[test]]
+name = "root separator"
+json = '''
+[
+    {
+        "value": 1
+    },
+    {
+        "value": 2
+    }
+]
+'''
+
+jfol = '''
+$[value: $value$$separator[
+]]
+'''
+
+text = """
+value: 1
+value: 2
+"""
+
+[[test]]
+name = "separator(field)"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$array[$value$$separator[$value
+]]
+'''
+
+text = """
+11
+2
+"""
