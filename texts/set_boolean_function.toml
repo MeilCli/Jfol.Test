@@ -1,0 +1,18 @@
+[[test]]
+name = "setBoolean"
+json = '''
+{
+    "value": "test"
+}
+'''
+
+jfol = '''
+$$setBoolean("value2",true)$$json
+'''
+
+text = """
+{
+    "value": "test",
+    "value2": true
+}
+"""

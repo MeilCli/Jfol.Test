@@ -1,0 +1,18 @@
+[[test]]
+name = "setString"
+json = '''
+{
+    "value": "test"
+}
+'''
+
+jfol = '''
+$$setString("value2","hell")$$json
+'''
+
+text = """
+{
+    "value": "test",
+    "value2": "hello"
+}
+"""

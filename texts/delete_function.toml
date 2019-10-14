@@ -1,0 +1,20 @@
+[[test]]
+name = "delete"
+json = '''
+{
+    "value": {
+        "text": "test"
+    },
+    "text": "hello"
+}
+'''
+
+jfol = '''
+$$delete("value")$$json
+'''
+
+text = """
+{
+    "text": "hello"
+}
+"""

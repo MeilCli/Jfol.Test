@@ -1,0 +1,175 @@
+[[test]]
+name = "eval(field, boolean)"
+json = '''
+{
+    "value": true
+}
+'''
+
+jfol = '''
+$$eval($value)
+'''
+
+text = """
+true
+"""
+
+[[test]]
+name = "eval(field, number)"
+json = '''
+{
+    "value": 10
+}
+'''
+
+jfol = '''
+$$eval($value)
+'''
+
+text = """
+10
+"""
+
+[[test]]
+name = "eval(field, string)"
+json = '''
+{
+    "value": "text"
+}
+'''
+
+jfol = '''
+$$eval($value)
+'''
+
+text = """
+text
+"""
+
+[[test]]
+name = "eval(field, null)"
+json = '''
+{
+    "value": null
+}
+'''
+
+jfol = '''
+$$eval($value)
+'''
+
+text = """
+null
+"""
+
+[[test]]
+name = "eval(function)"
+json = '''
+{
+    "value": 10
+}
+'''
+
+jfol = '''
+$$eval($$eval(true)=="true")
+'''
+
+text = """
+true
+"""
+
+[[test]]
+name = "eval(number1)"
+json = '''
+{
+    "value": 10
+}
+'''
+
+jfol = '''
+$$eval(10+20)
+'''
+
+text = """
+30
+"""
+
+[[test]]
+name = "eval(number2)"
+json = '''
+{
+    "value": 10
+}
+'''
+
+jfol = '''
+$$eval($value+20)
+'''
+
+text = """
+30
+"""
+
+[[test]]
+name = "eval(number3)"
+json = '''
+{
+    "value": 10
+}
+'''
+
+jfol = '''
+$$eval(1*2+20)
+'''
+
+text = """
+22
+"""
+
+[[test]]
+name = "eval(number4)"
+json = '''
+{
+    "value": 10
+}
+'''
+
+jfol = '''
+$$eval(1*2+3*4)
+'''
+
+text = """
+14
+"""
+
+[[test]]
+name = "eval(number5)"
+json = '''
+{
+    "value": 10
+}
+'''
+
+jfol = '''
+$$eval(1*(2+3))
+'''
+
+text = """
+5
+"""
+
+[[test]]
+name = "eval(number6)"
+json = '''
+{
+    "value": 10
+}
+'''
+
+jfol = '''
+$$eval(1*5<30)
+'''
+
+text = """
+true
+"""

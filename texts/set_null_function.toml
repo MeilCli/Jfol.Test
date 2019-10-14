@@ -1,0 +1,18 @@
+[[test]]
+name = "setNull"
+json = '''
+{
+    "value": "test"
+}
+'''
+
+jfol = '''
+$$setNull("value2")$$json
+'''
+
+text = """
+{
+    "value": "test",
+    "value2": null
+}
+"""

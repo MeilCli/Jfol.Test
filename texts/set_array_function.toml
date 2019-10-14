@@ -1,0 +1,57 @@
+[[test]]
+name = "setArray"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$$setArray("array2",$array)$$json($array2)
+'''
+
+text = """
+[
+    {
+        "value": 1
+    },
+    {
+        "value": 2
+    }
+]
+"""
+
+[[test]]
+name = "setArray(reference copy)"
+json = '''
+{
+    "array": [
+        {
+            "value": 1
+        },
+        {
+            "value": 2
+        }
+    ]
+}
+'''
+
+jfol = '''
+$$setArray("array2",$array)$array[$$delete("value")]$$json($array2)
+'''
+
+text = """
+[
+    {
+    },
+    {
+    }
+]
+"""

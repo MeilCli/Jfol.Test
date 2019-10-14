@@ -1,0 +1,18 @@
+[[test]]
+name = "value"
+json = '''
+{
+    "array": [
+        true,
+        false
+    ]
+}
+'''
+
+jfol = '''
+$array[$$value]
+'''
+
+text = """
+truefalse
+"""
