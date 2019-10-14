@@ -7,7 +7,7 @@ json = '''
 '''
 
 jfol = '''
-$$setString("value2","hell")$$json
+$$setString("value2","hello")$$json
 '''
 
 text = """
